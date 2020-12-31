@@ -10,10 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_12_30_193700) do
+ActiveRecord::Schema.define(version: 2020_12_31_152448) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "catalogs", force: :cascade do |t|
+    t.string "name"
+    t.string "status"
+    t.bigint "company_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["company_id"], name: "index_catalogs_on_company_id"
+  end
 
   create_table "companies", force: :cascade do |t|
     t.string "cnpj"
@@ -23,4 +32,5 @@ ActiveRecord::Schema.define(version: 2020_12_30_193700) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  add_foreign_key "catalogs", "companies"
 end
