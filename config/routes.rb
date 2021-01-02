@@ -1,3 +1,7 @@
 Rails.application.routes.draw do
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+
+  defaults({format: :json}) do
+    get('/:company_id', {to: "company#index", as: "company_front_web"})
+  end
 end
