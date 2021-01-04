@@ -1,0 +1,28 @@
+<div class="col-md-8">
+    <h1>Listagem de empresas</h1>
+
+    <div class="btn-group" role="group" aria-label="Basic example">
+        <button type="button" class="btn btn-primary">Criar Empresa</button>
+    </div>
+
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">CNPJ</th>
+            <th scope="col">Nome</th>
+            <th scope="col">Status</th>
+        </tr>
+        </thead>
+        <tbody>
+        <% @companies.each do |company| %>
+            <tr>
+                <th scope="row"><%= company.id %></th>
+                <td scope="row"><%= company.cnpj %></td>
+                <td scope="row"><%= company.name %></td>
+                <td scope="row"><%= company.status %></td>
+            </tr>
+        <% end %>
+        </tbody>
+  </table>
+</div>
