@@ -19,7 +19,24 @@ class Backoffice::CompaniesController < ApplicationController
         else
             flash.now[:error] = @company.errors.full_messages
             render :new
-        end
-        
+        end 
     end
+
+    def edit
+        id = params[:id]
+        @company = Company.find(id)
+    end
+
+    def update
+        id = params[:id]
+        @company = Company.find(id)
+        if @company.update(params.require(:company).permit(:name, :status))
+            flash[:notice] = "Produto atualizado com sucesso!"
+            redirect_to backoffice_companies_path
+        else
+            flash.now[:error] = @company.errors.full_messages
+            render :new
+        end
+    end
+
 end

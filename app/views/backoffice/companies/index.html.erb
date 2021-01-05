@@ -12,6 +12,8 @@
             <th scope="col">CNPJ</th>
             <th scope="col">Nome</th>
             <th scope="col">Status</th>
+            <th scope="col"></th>
+
         </tr>
         </thead>
         <tbody>
@@ -21,6 +23,7 @@
                 <td scope="row"><%= company.cnpj %></td>
                 <td scope="row"><%= company.name %></td>
                 <td scope="row"><%= company.status %></td>
+                <td><a href="<%= edit_backoffice_company_path(company) %>" class="btn btn-primary active" aria-current="page">Alterar</a></td>                 
             </tr>
         <% end %>
         </tbody>

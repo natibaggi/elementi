@@ -1,0 +1,35 @@
+<%= form_with(model: @company, url: backoffice_company_path) do |form| %>
+    <div class="row"> 
+        <div class="col-sm-8">
+            <div class="form-group">        
+                <%= form.label :cnpj, "CNPJ" %>
+                <%= form.text_field :cnpj, class:"form-control" %>
+            </div>
+        </div>
+    </div>
+    <div class="row"> 
+        <div class="col-sm-8">
+            <div class="form-group">        
+                <%= form.label :name, "Nome da Empresa" %>
+                <%= form.text_field :name, class:"form-control" %>
+            </div>
+        </div>
+    </div>
+    <div class="row"> 
+        <div class="col-sm-8">
+            <div class="form-group">        
+                <%= form.label :status, "Status" %>
+                <%= form.text_field :status, class:"form-control" %>
+            </div>
+        </div>
+    </div>
+
+    
+    <div class="row"> 
+        <div class="col-sm-2">
+            <div class="form-group">        
+                <%= form.submit 'Enviar', class: 'btn btn-primary' %>
+            </div>
+        </div>
+    </div>
+<% end %>
