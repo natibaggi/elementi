@@ -53,8 +53,18 @@
           </div>
         </div>
       </nav>
-
     </header>
+
+    <% if flash[:notice] %>
+      <div class="alert alert-success" role="alert">
+        <%= flash[:notice] %>
+      </div>
+    <% elsif flash[:error]%>
+      <div class="alert alert-danger" role="alert">
+        <%= flash[:error] %>
+      </div>
+    <% end %>
+
 
     <%= yield %>
   </body>
