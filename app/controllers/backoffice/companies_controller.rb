@@ -35,7 +35,7 @@ class Backoffice::CompaniesController < ApplicationController
             redirect_to backoffice_companies_path
         else
             flash.now[:error] = @company.errors.full_messages
-            render :new
+            render :edit
         end
     end
 
