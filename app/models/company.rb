@@ -9,7 +9,7 @@ class Company < ApplicationRecord
     private
     def cnpj_validates
         if !CNPJ.valid?(cnpj)
-            errors.add(:cnpj, " não é válido")
+            errors.add(:cnpj, "não é válido")
         end
     end
 
