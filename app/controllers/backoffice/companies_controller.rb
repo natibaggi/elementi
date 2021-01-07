@@ -39,4 +39,10 @@ class Backoffice::CompaniesController < ApplicationController
         end
     end
 
+    def show
+        id = params[:id]
+        @company = Company.find(id)
+    end
+
+
 end

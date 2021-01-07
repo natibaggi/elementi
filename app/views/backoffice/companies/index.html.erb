@@ -24,6 +24,7 @@
                 <td scope="row"><%= company.name %></td>
                 <td scope="row"><%= company.status %></td>
                 <td><a href="<%= edit_backoffice_company_path(company) %>" class="btn btn-primary active" aria-current="page">Alterar</a></td>                 
+                <td><a href="<%= backoffice_company_path(company) %>" class="btn btn-primary active" aria-current="page">Visualizar</a></td>                 
             </tr>
         <% end %>
         </tbody>
