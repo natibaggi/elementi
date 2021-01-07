@@ -14,6 +14,8 @@ class Backoffice::CompaniesController < ApplicationController
 
         @company = Company.new(company_params)
         if @company.save
+
+            Catalog.create(company: @company, name: 'Catálogo Principal', status: 'active')
             flash[:notice] = "Empresa salva com sucesso!"
             redirect_to backoffice_companies_path
         else
@@ -42,6 +44,7 @@ class Backoffice::CompaniesController < ApplicationController
     def show
         id = params[:id]
         @company = Company.find(id)
+        @catalog = @company.catalog
     end
 
 

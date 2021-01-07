@@ -1,3 +1,6 @@
+<h1>Dados da Empresa</h1>
+
+
 <div class="col-md-8">
     <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
         <div class="row">
@@ -41,4 +44,28 @@
             </div>
         </div>
     </div>
+</div>
+
+
+<div class="col-md-8">
+    <h1>Cátalogos da Empresa</h1>
+
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th scope="col">Id Catálogo</th>
+                <th scope="col">Nome</th>
+                <th scope="col">Status</th>
+                <th scope="col">Data Criação</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row"><%= @catalog.id %></th>
+                <td scope="row"><%= @catalog.name %></td>
+                <td scope="row"><%= @catalog.status %></td>
+                <td scope="row"><%= @catalog.created_at %></td>
+            </tr>
+        </tbody>
+  </table>
 </div>
