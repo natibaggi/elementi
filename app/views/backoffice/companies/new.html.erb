@@ -19,12 +19,11 @@
         <div class="col-sm-8">
             <div class="form-group">        
                 <%= form.label :status, "Status" %>
-                <%= form.text_field :status, class:"form-control" %>
+                <%= form.select :status, [["Ativa", "active"], ["Inativa", "inactive"]], {}, class:"form-select" %>
             </div>
         </div>
     </div>
 
-    
     <div class="row"> 
         <div class="col-sm-2">
             <div class="form-group">        
