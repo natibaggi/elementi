@@ -1,9 +1,14 @@
 class Company < ApplicationRecord
-    validates :name, presence: true
-    validate :cnpj_validates
-
     has_one :catalog
     has_many(:categories)
+
+    
+    validate :cnpj_validates
+    validates :cnpj, uniqueness: true
+
+    validates :name, length: { minimum: 6 }
+
+    validates :status, inclusion: { in: ["active", "inactive"]}
 
 
     private
