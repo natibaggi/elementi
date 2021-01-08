@@ -99,7 +99,7 @@ RSpec.describe Backoffice::CompaniesController, type: :request do
 
         # expectativas
         expect(company.status).to eq('active') # deve continuar active
-        expect(response.body).to include('Nome não pode ficar em branco')
+        expect(response.body).to include('Nome é muito curto')
       end
     end
   end
