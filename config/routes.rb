@@ -8,6 +8,14 @@ Rails.application.routes.draw do
     resources(:companies)
   end
 
+  namespace :api do
+    namespace :painel do
+      namespace :v1 do
+        resources :categories
+      end
+    end
+  end
+
   defaults({format: :json}) do
     get('/:company_id', {to: "company#index", as: "company_front_web"})
   end
