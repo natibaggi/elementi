@@ -9,6 +9,7 @@ gem 'rails', '~> 6.1.0'
 gem "cpf_cnpj"
 
 gem 'rails-i18n'
+gem 'active_model_serializers', '~> 0.10.0'
 
 # Use postgresql as the database for Active Record
 gem 'pg', '~> 1.1'
@@ -32,6 +33,8 @@ gem 'jbuilder', '~> 2.7'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.4', require: false
+
+gem 'apipie-rails'
 
 group :development, :test do
   gem 'rspec-rails', '~> 4.0.1'
