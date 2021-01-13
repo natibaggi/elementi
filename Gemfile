@@ -9,6 +9,7 @@ gem 'rails', '~> 6.1.0'
 gem "cpf_cnpj"
 
 gem 'rails-i18n'
+gem 'active_model_serializers', '~> 0.10.0'
 
 # Use postgresql as the database for Active Record
 gem 'pg', '~> 1.1'
